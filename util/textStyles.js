@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 import media from "./media";
-//72 px desktop, 48 tablet, 30 mobile
+//72 px laptop, 48 tablet, 30 mobile
 const oversized = css`
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   font-weight: 400;
-  @media ${media.desktop} {
+  @media ${media.laptop} {
     font-size: 9.313rem;
   }
   @media ${media.tablet} {
@@ -16,14 +16,14 @@ const oversized = css`
     font-size: 3.75rem;
   }
 `;
-//48 desktop,
+//48 laptop,
 const heading = css`
   font-size: 5.96rem;
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
-  @media ${media.desktop} {
+  @media ${media.laptop} {
     font-size: 4.74rem;
   }
   @media ${media.tablet} {
@@ -39,7 +39,7 @@ const subtitle = css`
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   letter-spacing: 0.08em;
   font-weight: 400;
-  @media ${media.desktop} {
+  @media ${media.laptop} {
     font-size: 3.052rem;
   }
   @media ${media.tablet} {
@@ -49,20 +49,18 @@ const subtitle = css`
     font-size: 2rem;
   }
 `;
-const desktopNav = css`
+const laptopNav = css`
   font-size: 3.052rem;
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   letter-spacing: 0.08em;
   font-weight: 400;
-  @media ${media.desktop} {
-    font-size: 3.052rem;
-  }
+  font-size: 2rem;
   @media ${media.tablet} {
     font-size: 2.5rem;
   }
-  @media ${media.phone} {
-    font-size: 2rem;
+  @media ${media.laptop} {
+    font-size: 3.052rem;
   }
 `;
 
@@ -72,14 +70,12 @@ const subtitleInter = css`
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   font-weight: 400;
-  @media ${media.desktop} {
-    font-size: 3.052rem;
-  }
+  font-size: 2rem;
   @media ${media.tablet} {
     font-size: 2.5rem;
   }
-  @media ${media.phone} {
-    font-size: 2rem;
+  @media ${media.laptop} {
+    font-size: 3.052rem;
   }
 `;
 const paragraph = css`
@@ -88,7 +84,7 @@ const paragraph = css`
   font-size: 1.953rem;
   font-weight: 400;
   color: #ccd1d3;
-  @media ${media.desktop} {
+  @media ${media.laptop} {
     font-size: 2rem;
   }
   @media ${media.tablet} {
@@ -107,21 +103,21 @@ const link = css`
   font-weight: 400;
   color: #ccd1d3;
   text-underline-offset: 3px;
-  @media ${media.desktop} {
-    font-size: 2.441rem;
+  @media ${media.laptop} {
+    font-size: 4rem;
   }
   @media ${media.tablet} {
-    font-size: 2.441rem;
+    font-size: 2.5rem;
   }
   @media ${media.phone} {
-    font-size: 2.441rem;
+    font-size: 2rem;
   }
 `;
 const TextStyles = {
   oversized,
   heading,
   subtitle,
-  desktopNav,
+  laptopNav,
   subtitleInter,
   paragraph,
   link,
