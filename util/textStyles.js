@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 import media from "./media";
-//72 px laptop, 48 tablet, 30 mobile
+
 const oversized = css`
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;

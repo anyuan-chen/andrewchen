@@ -104,7 +104,7 @@ const itemVariants = {
     opacity: 0,
   },
   open: {
-    opacity: 1,
+    opacity: 1, 
   },
 };
 const sideVariants = {

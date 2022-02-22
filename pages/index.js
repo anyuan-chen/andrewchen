@@ -30,8 +30,8 @@ export default function Home() {
           <p>
             I’m a software engineer based in Toronto who I design and build
             refreshing web experiences, packed to the punch with delightful
-            interactions.
-          </p>
+            interactions. 
+          </p> 
         </Box>
         <Box title="Work">
           <p>

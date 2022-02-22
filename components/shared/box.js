@@ -11,7 +11,7 @@ const Container = styled.section`
   box-sizing: border-box;
   border-width: 0 5px 5px 5px;
   border-color: #cacaca;
-  border-style: solid;
+  border-style: solid; 
   display: flex;
   flex-direction: column;
   h1 {
@@ -27,7 +27,6 @@ export default function Box({ children, title }) {
     <Container>
       <TitleArea title={title}> </TitleArea>
       {children}
-
     </Container>
   );
 }

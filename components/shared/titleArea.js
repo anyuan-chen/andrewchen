@@ -11,5 +11,5 @@ export default function TitleArea({title}) {
       <h1>{title}</h1>
       <img src="/icons/arrow_downward.svg" alt="arrow"></img>
     </Title>
-  );
+  ); 
 }
