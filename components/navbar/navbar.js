@@ -17,6 +17,7 @@ const Aside = styled.aside`
   background-color: #021923;
   width: 28.75rem;
   height: 100vh;
+  
   position: fixed;
   z-index: 2;
   a {
@@ -78,7 +79,6 @@ const ButtonContainer = styled.div`
   height: 90px;
   box-sizing: border-box;
   border: 7px solid #cacaca;
-
 
   @media ${media.laptop} {
     display: none;
@@ -177,101 +177,3 @@ export default function Navbar() {
   );
 }
 
-// /* eslint-disable @next/next/no-img-element */
-// import React from "react";
-// import styled from "styled-components";
-// import media from "../../util/media";
-// import { Logo } from "../icons/logo";
-// import { Hamburger } from "../icons/hamburger";
-// import NavbarElement from "./navbarElement";
-// import { AnimatePresence, motion, useCycle } from "framer-motion";
-// import TextStyles from "../../util/textStyles";
-
-// const Background = styled.div`
-//   background-color: #021923;
-//   display: flex;
-//   align-items: center;
-//   padding-left: 25px;
-//   padding-right: 25px;
-//   justify-content: space-between;
-//   @media (${media.laptop}) {
-//     background-color: #f2f2f2;
-//     height: 100vh;
-//     background-color: white;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-//     padding-top: 50px;
-//     padding-left: 50px;
-//     padding-right: 50px;
-//   }
-// `;
-// const StyledLogo = styled(Logo)`
-//   color: white;
-//   @media (${media.laptop}) {
-//     color: black;
-//     height: 191.7px;
-//     width: 170px;
-//   }
-// `;
-// const StyledHamburger = styled(Hamburger)`
-//   color: white;
-//   @media (${media.laptop}) {
-//     display: none;
-//   }
-// `;
-// const DesktopNav = styled.nav`
-//   display: none;
-//   @media (${media.laptop}) {
-//     display: flex;
-//     flex-direction: column;
-//     padding-top: 100px;
-//     border-bottom: 1px solid #d8d8d8;
-//   }
-// `;
-// const links = [
-//   { text: "home", link: "/" },
-//   { text: "work", link: "/work" },
-//   { text: "writing", link: "/writing" },
-//   { text: "about", link: "/about" },
-//   { text: "contact", link: "/contact" },
-// ];
-// const MobileNav = styled.nav`
-//   padding-top: 70px;
-//   position: fixed;
-// `;
-
-// export default function Navbar() {
-//   return (
-//     <Background>
-//       <StyledLogo></StyledLogo>
-//       <button>
-//         <StyledHamburger></StyledHamburger>
-//       </button>
-//       <DesktopNav>
-//         {links.map((link, index) => {
-//           return (
-//             <NavbarElement
-//               key={index}
-//               text={link.text}
-//               link={link.link}
-//             ></NavbarElement>
-//           );
-//         })}
-//       </DesktopNav>
-//       <motion.aside initial={{ width: 0 }}>
-//         <MobileNav>
-//           {links.map((link, index) => {
-//             return (
-//               <NavbarElement
-//                 key={index}
-//                 text={link.text}
-//                 link={link.link}
-//               ></NavbarElement>
-//             );
-//           })}
-//         </MobileNav>
-//       </motion.aside>
-//     </Background>
-//   );
-// }
