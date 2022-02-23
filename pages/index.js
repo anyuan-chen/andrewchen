@@ -13,33 +13,12 @@ import LinkMain from "../components/shared/link";
 import WorkContainer from "../components/shared/workContainer";
 import WritingContainer from "../components/shared/writingContainer";
 import ArticlePreview from "../components/shared/writingArticlePreview";
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-gap: 10px;
-  margin-top: 90px;
-  border-right: 7px solid #cacaca;
-  border-left: 7px solid #cacaca;
-  @media ${media.laptop} {
-    width: calc(100vw - 28.75rem);
-    height: 100vh;
-    border-top: 7px solid #cacaca;
-    margin-top: 0;
-  }
-`;
+import Page from "../layouts/page";
 
-const Background = styled.div`
-  display: flex;
-`;
 
 export default function Home() {
   return (
-    <Background>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Navbar></Navbar>
-      <Container>
+    <Page>
         <Box title="About Me">
           <p style={{ paddingBottom: "7rem" }}>
             I’m a software engineer based in Toronto who I design and build
@@ -83,7 +62,6 @@ export default function Home() {
             ></ArticlePreview>
           </WritingContainer>
         </Box>
-      </Container>
-    </Background>
+    </Page>
   );
 }

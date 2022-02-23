@@ -4,7 +4,6 @@ import styled from "styled-components";
 import TextStyles from "../../util/textStyles";
 import TitleArea from "./titleArea";
 
-
 const Container = styled.section`
   background-color: #021923;
   box-sizing: border-box;
@@ -20,7 +19,7 @@ const Container = styled.section`
   }
 `;
 
-export default function Box({ children, title }) {
+export default function Box({ children, title, fullWidth }) {
   return (
     <Container>
       <TitleArea title={title}> </TitleArea>
