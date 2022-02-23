@@ -7,22 +7,25 @@ import { MDXRemote } from "next-mdx-remote";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import Button from "../../components/mdx/button";
-import Heading from "../../components/mdx/h1";
-import Paragraph from "../../components/mdx/p";
+import Heading from "../../components/mdx/heading";
+import Paragraph from "../../components/mdx/paragraph";
+import ArticleLayout from "../../components/mdx/articleLayout";
+const components = {
+    Heading,
+    Paragraph,
+    Button,
+    ArticleLayout,
+    SyntaxHighlighter
+}
 export default function Project({
   mdxSource,
-  title,
-  date,
-  description,
-  tags,
-  year,
-  thumbnailUrl,
 }) {
   return (
     <Page>
-      <h1>{title}</h1>
-      <h2>{date}</h2>
-      <MDXRemote {...mdxSource} components={{SyntaxHighlighter, Button, h1: Heading, p: Paragraph}} />
+      <MDXRemote
+        {...mdxSource}
+        components={components}
+      />
     </Page>
   );
 }
@@ -42,7 +45,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const file = fs.readFileSync(path.join("portfolio", `${params.project}.mdx`));
   const {
-      content,
+    content,
     data: { title, date, description, tags, year, thumbnailUrl },
   } = matter(file);
   const mdxSource = await serialize(content);
