@@ -11,17 +11,26 @@ import Box from "../components/shared/box";
 import WorkRow from "../components/shared/workRow";
 import LinkMain from "../components/shared/link";
 import WorkContainer from "../components/shared/workContainer";
+import WritingContainer from "../components/shared/writingContainer";
+import ArticlePreview from "../components/shared/writingArticlePreview";
 const Container = styled.div`
-  background-color: blue;
   display: flex;
   flex-direction: column;
   flex-gap: 10px;
   margin-top: 90px;
   border-right: 7px solid #cacaca;
   border-left: 7px solid #cacaca;
+  @media ${media.laptop} {
+    width: calc(100vw - 28.75rem);
+    height: 100vh;
+    border-top: 7px solid #cacaca;
+    margin-top: 0;
+  }
 `;
 
-const Background = styled.div``;
+const Background = styled.div`
+  display: flex;
+`;
 
 export default function Home() {
   return (
@@ -47,10 +56,34 @@ export default function Home() {
           <LinkMain></LinkMain>
         </Box>
         <Box title="Writing">
-
+          <WritingContainer>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+          </WritingContainer>
         </Box>
       </Container>
     </Background>
   );
 }
-

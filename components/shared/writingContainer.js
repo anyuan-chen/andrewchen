@@ -1,7 +1,12 @@
 import React from 'react'
-
-export default function WritingContainer() {
+import styled from 'styled-components'
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    
+`
+export default function WritingContainer({children}) {
   return (
-    <div>WritingContainer</div>
+    <Container>{children}</Container>
   )
 }

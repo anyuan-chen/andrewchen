@@ -34,8 +34,9 @@ const DesktopNav = styled.nav`
   @media ${media.laptop} {
     display: flex;
     flex-direction: column;
-    padding-left: 70px;
     padding-top: 50px;
+    margin-left: auto;
+    padding-left: 40px;
     background-color: white;
     width: 16.666vw;
     height: 100vh;
