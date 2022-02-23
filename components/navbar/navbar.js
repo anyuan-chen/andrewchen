@@ -34,8 +34,9 @@ const DesktopNav = styled.nav`
   @media ${media.laptop} {
     display: flex;
     flex-direction: column;
-    padding-left: 70px;
     padding-top: 50px;
+    margin-left: auto;
+    padding-left: 40px;
     background-color: white;
     width: 16.666vw;
     height: 100vh;
@@ -74,9 +75,11 @@ const ButtonContainer = styled.div`
   width: 100vw;
   padding: 0 25px;
   background-color: #021923;
-  height: 70px;
+  height: 90px;
   box-sizing: border-box;
-  border: 5px solid #cacaca;
+  border: 7px solid #cacaca;
+
+
   @media ${media.laptop} {
     display: none;
   }
@@ -104,7 +107,7 @@ const itemVariants = {
     opacity: 0,
   },
   open: {
-    opacity: 1,
+    opacity: 1, 
   },
 };
 const sideVariants = {

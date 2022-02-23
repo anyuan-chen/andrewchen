@@ -90,6 +90,8 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
 }
 
 button {
@@ -109,3 +111,4 @@ a{
 a:focus {
   outline: orange 5px auto;
 }
+

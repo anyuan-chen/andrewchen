@@ -8,15 +8,29 @@ import media from "../util/media";
 import Navbar from "../components/navbar/navbar";
 import Link from "next/link";
 import Box from "../components/shared/box";
+import WorkRow from "../components/shared/workRow";
+import LinkMain from "../components/shared/link";
+import WorkContainer from "../components/shared/workContainer";
+import WritingContainer from "../components/shared/writingContainer";
+import ArticlePreview from "../components/shared/writingArticlePreview";
 const Container = styled.div`
-  background-color: blue;
   display: flex;
   flex-direction: column;
   flex-gap: 10px;
-  margin-top: 70px;
+  margin-top: 90px;
+  border-right: 7px solid #cacaca;
+  border-left: 7px solid #cacaca;
+  @media ${media.laptop} {
+    width: calc(100vw - 28.75rem);
+    height: 100vh;
+    border-top: 7px solid #cacaca;
+    margin-top: 0;
+  }
 `;
 
-const Background = styled.div``;
+const Background = styled.div`
+  display: flex;
+`;
 
 export default function Home() {
   return (
@@ -27,68 +41,49 @@ export default function Home() {
       <Navbar></Navbar>
       <Container>
         <Box title="About Me">
-          <p>
+          <p style={{ paddingBottom: "7rem" }}>
             I’m a software engineer based in Toronto who I design and build
             refreshing web experiences, packed to the punch with delightful
             interactions.
           </p>
         </Box>
         <Box title="Work">
-          <p>
-            I’m a software engineer based in Toronto who I design and build
-            refreshing web experiences, packed to the punch with delightful
-            interactions.
-          </p>
+          <WorkContainer>
+            <WorkRow projectName={"hi"} year={2022}></WorkRow>
+            <WorkRow projectName={"hi"} year={2022}></WorkRow>
+            <WorkRow projectName={"hi"} year={2022}></WorkRow>
+          </WorkContainer>
+          <LinkMain></LinkMain>
+        </Box>
+        <Box title="Writing">
+          <WritingContainer>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+            <ArticlePreview
+              title={
+                "This is a title of the Article that I Wrote today in the Morning"
+              }
+              description={
+                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
+              }
+            ></ArticlePreview>
+          </WritingContainer>
         </Box>
       </Container>
     </Background>
   );
-}
-{
-  /* <AboutBox>
-          <div style={{ display: "flex" }}>
-            <h1>About Me</h1>
-            <img src="/icons/arrow_downward.svg" alt="arrow"></img>
-          </div>
-          <p>
-            I’m a software engineer based in Toronto who I design and build
-            refreshing web experiences, packed to the punch with delightful
-            interactions.
-          </p>
-        </AboutBox>
-        <WorkBox>
-          <div style={{ display: "flex", paddingBottom: "30px" }}>
-            <h1>Work</h1>
-            <img src="/icons/arrow_downward.svg" alt="arrow"></img>
-          </div>
-          <div styled={{ display: "flex" }}>
-            {work.map((project, index) => {
-              return (
-                <WorkRow key={index}>
-                  <h2>{project.name}</h2>
-                  <h2>{project.year}</h2>
-                </WorkRow>
-              );
-            })}
-          </div>
-          <a style={{ paddingBottom: "20px", paddingTop: "10px" }}>See all</a>
-        </WorkBox>
-        <WritingBox>
-          <div style={{ display: "flex" }}>
-            <h1>Writing</h1>
-            <img src="/icons/arrow_downward.svg" alt="arrow"></img>
-          </div>
-          <div>
-            {articles.map((article, index) => {
-              <ArticleBox key={index}>
-                <Link href={article.link}>
-                  <a>
-                    <h1>{article.title}</h1>     
-                    <h2>{article.subtitle}</h2>              
-                  </a>
-                </Link>
-              </ArticleBox>;
-            })}
-          </div>
-        </WritingBox> */
 }

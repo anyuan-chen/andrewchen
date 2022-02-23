@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 import media from "./media";
-//72 px laptop, 48 tablet, 30 mobile
-const oversized = css`
+
+const oversized = css`ff
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
@@ -13,7 +13,7 @@ const oversized = css`
     font-size: 4.75rem;
   }
   @media ${media.phone} {
-    font-size: 3.75rem;
+    font-size: 4.55rem;
   }
 `;
 //48 laptop,
@@ -22,15 +22,15 @@ const heading = css`
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
+  font-weight: 300;
   @media ${media.laptop} {
     font-size: 4.74rem;
   }
   @media ${media.tablet} {
-    font-size: 3.75rem;
+    font-size: 5.75rem;
   }
   @media ${media.phone} {
-    font-size: 3rem;
+    font-size: 3.6rem;
   }
 `;
 const subtitle = css`
@@ -107,10 +107,10 @@ const link = css`
     font-size: 4rem;
   }
   @media ${media.tablet} {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   @media ${media.phone} {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 `;
 const TextStyles = {
