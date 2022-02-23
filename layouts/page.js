@@ -10,6 +10,7 @@ const Container = styled.div`
   margin-top: 90px;
   border-right: 7px solid #cacaca;
   border-left: 7px solid #cacaca;
+  width: 100vw;
   @media ${media.laptop} {
     width: calc(100vw - 28.75rem);
     height: 100vh;

@@ -2,7 +2,6 @@
 import React from "react";
 import styled from "styled-components";
 import TextStyles from "../../util/textStyles";
-import media from "../../util/media";
 
 const Container = styled.div` 
   h1 {
@@ -10,7 +9,7 @@ const Container = styled.div`
   }
   h2 {
     ${TextStyles.heading} 
-    padding-bottom: 4rem;  
+    padding-bottom: 4rem;   
   }
 `;
 export default function DetailedArticlePreview({

@@ -11,7 +11,7 @@ export default function Work({ files }) {
     <Page>
       <Box title="Work" fullWidth={true} >  
         {files.map((file, index) => {  
-          return file.thumbnailUrl ? (    
+          return file.thumbnailUrl ? (     
             <DetailedArticlePreview
               title={file.title}
               key={index}

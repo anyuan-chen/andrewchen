@@ -11,29 +11,19 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;
-  width: ${(props) => (props.fullWidth ? "100vw;" : ";")} 
   h1 {
     ${TextStyles.heading}
   }
   p {
-    ${TextStyles.oversized} 
+    ${TextStyles.oversized}
   }
 `;
 
 export default function Box({ children, title, fullWidth }) {
-  if (fullWidth) {
-    return (
-      <Container>
-        <TitleArea title={title}> </TitleArea>
-        {children}
-      </Container>
-    );
-  } else {
-    return (
-      <Container>
-        <TitleArea title={title}> </TitleArea>
-        {children}
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <TitleArea title={title}> </TitleArea>
+      {children}
+    </Container>
+  );
 }
