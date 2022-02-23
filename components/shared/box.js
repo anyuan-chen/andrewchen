@@ -7,13 +7,11 @@ import TitleArea from "./titleArea";
 
 const Container = styled.section`
   background-color: #021923;
-  padding: 1rem 3rem;
   box-sizing: border-box;
-  border-width: 0 5px 5px 5px;
-  border-color: #cacaca;
-  border-style: solid; 
+  border-bottom: 7px solid #cacaca;
   display: flex;
   flex-direction: column;
+  padding: 3rem 4rem;
   h1 {
     ${TextStyles.heading}
   }

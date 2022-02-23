@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import TextStyles from '../../util/textStyles'
-
 const Row = styled.div`
     display: flex;
+    justify-content: space-between;
+    align-items: end;
     h2 {
         ${TextStyles.oversized}
     }
     h3 {
-        ${TextStyles.subtitleInter}
+        ${TextStyles.heading}
+        color: white;
     }
 `
-export default function workRow({projectName, year}) {
+export default function WorkRow({projectName, year}) {
   return (
     <Row>
         <h2>{projectName}</h2>

@@ -74,9 +74,11 @@ const ButtonContainer = styled.div`
   width: 100vw;
   padding: 0 25px;
   background-color: #021923;
-  height: 70px;
+  height: 90px;
   box-sizing: border-box;
-  border: 5px solid #cacaca;
+  border: 7px solid #cacaca;
+
+
   @media ${media.laptop} {
     display: none;
   }
