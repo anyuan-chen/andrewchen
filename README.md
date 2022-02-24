@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+
+<a href=""><img src="https://img.shields.io/github/languages/code-size/anyuan-chen/andrewchen" /></a>
+<a href=""><img src="https://img.shields.io/tokei/lines/github/anyuan-chen/andrewchen" /></a>
+<a href=""><img src="https://img.shields.io/github/package-json/dependency-version/anyuan-chen/andrewchen/react" /></a>
+<a href=""><img src="https://img.shields.io/github/license/anyuan-chen/andrewchen" /></a>
 
 ## Getting Started
 
