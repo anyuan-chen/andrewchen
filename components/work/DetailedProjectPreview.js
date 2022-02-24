@@ -13,7 +13,7 @@ const Container = styled.div`
     margin-bottom: 4rem;
   }
 `;
-export default function DetailedArticlePreview({
+export default function DetailedProjectPreview({
   title,
   description,
   imgUrl,

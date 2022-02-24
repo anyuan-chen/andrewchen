@@ -5,7 +5,6 @@ import Image from "next/image";
 import TextStyles from "../util/textStyles";
 import styled from "styled-components";
 import media from "../util/media";
-import Navbar from "../components/navbar/navbar";
 import Link from "next/link";
 import Box from "../components/shared/box";
 import WorkRow from "../components/shared/workRow";
@@ -14,54 +13,72 @@ import WorkContainer from "../components/shared/workContainer";
 import WritingContainer from "../components/shared/writingContainer";
 import ArticlePreview from "../components/shared/writingArticlePreview";
 import Page from "../layouts/page";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 
-
-export default function Home() {
+export default function Home({ workData, articleData }) {
   return (
     <Page>
-        <Box title="About Me">
-          <p style={{ paddingBottom: "7rem" }}>
-            I’m a software engineer based in Toronto who I design and build
-            refreshing web experiences, packed to the punch with delightful
-            interactions.
-          </p>
-        </Box>
-        <Box title="Work">
-          <WorkContainer>
-            <WorkRow projectName={"hi"} year={2022}></WorkRow>
-            <WorkRow projectName={"hi"} year={2022}></WorkRow>
-            <WorkRow projectName={"hi"} year={2022}></WorkRow>
-          </WorkContainer>
-          <LinkMain></LinkMain>
-        </Box>
-        <Box title="Writing">
-          <WritingContainer>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
-          </WritingContainer>
-        </Box>
+      <Box title="About Me">
+        <p style={{ paddingBottom: "7rem" }}>
+          I’m a software engineer based in Toronto who I design and build
+          refreshing web experiences, packed to the punch with delightful
+          interactions.
+        </p>
+      </Box>
+      <Box title="Work">
+        <WorkContainer>
+          {workData.map((project, index) => {
+            return (
+              <WorkRow
+                key={index}
+                projectName={project.title}
+                year={project.year}
+                link={project.link}
+              ></WorkRow>
+            );
+          })}
+        </WorkContainer>
+        <LinkMain></LinkMain>
+      </Box>
+      <Box title="Writing">
+        <WritingContainer>
+          {articleData.map((article, index) => {
+            return (
+              <ArticlePreview
+                key={index}
+                link={article.link}
+                title={article.title}
+                description={article.description}
+              ></ArticlePreview>
+            );
+          })}
+        </WritingContainer>
+      </Box>
     </Page>
   );
+}
+export async function getStaticProps() {
+  const work = fs.readdirSync("portfolio");
+  const workData = work.map((project) => {
+    const projectData = fs.readFileSync(path.join("portfolio", project));
+    const { data: frontmatter } = matter(projectData);
+    frontmatter.link = project.substr(0, project.length - 4);
+    return  frontmatter ;
+  });
+  const articles = fs.readdirSync("articles");
+  const articleData = articles.map((article) => {
+    const articleData = fs.readFileSync(path.join("articles", article));
+    const { data: frontmatter } = matter(articleData);
+    frontmatter.link = article.substr(0, article.length - 4);
+    return frontmatter;
+  });
+  console.log(workData);
+  return {
+    props: {
+      workData,
+      articleData,
+    },
+  };
 }

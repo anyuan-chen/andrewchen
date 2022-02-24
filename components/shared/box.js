@@ -17,6 +17,9 @@ const Container = styled.section`
   p {
     ${TextStyles.oversized}
   }
+  h3 {
+    ${TextStyles.normal}
+  }
 `;
 
 export default function Box({ children, title, fullWidth }) {

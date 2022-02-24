@@ -3,32 +3,32 @@ import Page from "../../layouts/page";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import DetailedArticlePreview from "../../components/work/DetailedArticlePreview";
+import DetailedProjectPreview from "../../components/work/DetailedProjectPreview";
 import Box from "../../components/shared/box";
 
 export default function Work({ files }) {
   return (
     <Page>
-      <Box title="Work" fullWidth={true} >  
-        {files.map((file, index) => {  
-          return file.thumbnailUrl ? (     
-            <DetailedArticlePreview
+      <Box title="Work" fullWidth={true}>
+        {files.map((file, index) => {
+          return file.thumbnailUrl ? (
+            <DetailedProjectPreview
               title={file.title}
               key={index}
               year={file.year}
               imgUrl={file.thumbnailUrl}
               description={file.description}
-            ></DetailedArticlePreview>
+            ></DetailedProjectPreview>
           ) : (
-            <DetailedArticlePreview 
+            <DetailedProjectPreview
               title={file.title}
               key={index}
               year={file.year}
               imgUrl={file.thumbnailUrl}
               description={file.description}
-            ></DetailedArticlePreview>
+            ></DetailedProjectPreview>
           );
-        })}   
+        })}
       </Box>
     </Page>
   );
@@ -39,12 +39,10 @@ export async function getStaticProps() {
   const files = works.map((work) => {
     const buffer = fs.readFileSync(path.join("portfolio", `${work}`));
     const {
-      data: { title, date, description, thumbnailUrl, year },
+      data: { title, thumbnailUrl, year },
     } = matter(buffer);
     return {
       title,
-      date,
-      description,
       thumbnailUrl,
       year,
     };

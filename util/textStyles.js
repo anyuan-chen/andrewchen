@@ -16,13 +16,28 @@ const oversized = css`
     font-size: 4.55rem;
   }
 `;
+const normal = css`
+  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  font-weight: 400;
+  @media ${media.laptop} {
+    font-size: 4.313rem;
+  }
+  @media ${media.tablet} {
+    font-size: 3.55rem;
+  }
+  @media ${media.phone} {
+    font-size: 3rem;
+  }
+`;
 //48 laptop,
 const heading = css`
   font-size: 5.96rem;
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: rgba(255, 255, 255, 0.6);
-  font-weight: 300;
+  font-weight: 400;
   @media ${media.laptop} {
     font-size: 4.74rem;
   }
@@ -120,6 +135,7 @@ const TextStyles = {
   laptopNav,
   subtitleInter,
   paragraph,
+  normal,
   link,
 };
 
