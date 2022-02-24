@@ -29,37 +29,13 @@ export default function Home() {
         <Box title="Work">
           <WorkContainer>
             <WorkRow projectName={"hi"} year={2022}></WorkRow>
-            <WorkRow projectName={"hi"} year={2022}></WorkRow>
-            <WorkRow projectName={"hi"} year={2022}></WorkRow>
+            
           </WorkContainer>
           <LinkMain></LinkMain>
         </Box>
         <Box title="Writing">
           <WritingContainer>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
-            <ArticlePreview
-              title={
-                "This is a title of the Article that I Wrote today in the Morning"
-              }
-              description={
-                "Description goes here. Description goes here. Description goes here. Description goes here.Description goes here. Description goes here. Description goes here. Description "
-              }
-            ></ArticlePreview>
+            
           </WritingContainer>
         </Box>
     </Page>
