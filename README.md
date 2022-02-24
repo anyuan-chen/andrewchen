@@ -1,4 +1,4 @@
-# Portfolio Website
+# Andrew Chen's Portfolio Website
 
 <a href=""><img src="https://img.shields.io/github/languages/code-size/anyuan-chen/andrewchen" /></a>
 <a href=""><img src="https://img.shields.io/tokei/lines/github/anyuan-chen/andrewchen" /></a>
