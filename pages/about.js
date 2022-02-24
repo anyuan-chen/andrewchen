@@ -40,7 +40,7 @@ export default function About({ songInfo: { artist, imgUrl, album, name ,lastFmU
     </Page>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const apiKey = process.env.LAST_FM_API_KEY;
   const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=andrewchen2004&api_key=${apiKey}&format=json`;
   const req = await fetch(url);
