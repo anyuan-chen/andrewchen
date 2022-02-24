@@ -25,6 +25,9 @@ const InnerContainer = styled.div`
   h2 {
     ${TextStyles.subtitleInter}
   }
+  h3 {
+    ${TextStyles.paragraph}
+  }
 `;
 export default function MusicBox({ name, artist, album, imgUrl, lastFmUrl }) {
   return (
@@ -33,8 +36,8 @@ export default function MusicBox({ name, artist, album, imgUrl, lastFmUrl }) {
         <img src={imgUrl} alt={album}></img>
         <InnerContainer>
           <h1>{name}</h1>
-          <h2>By: {artist}</h2>
-          <h2>From the album: {album}</h2>
+          <h2>{artist}</h2>
+          <h3>{album}</h3>
         </InnerContainer>
       </Container>
     </a>
