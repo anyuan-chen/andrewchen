@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "styled-components";
+import media from "../../util/media";
 import TextStyles from "../../util/textStyles";
 import TitleArea from "./titleArea";
 
@@ -20,11 +21,15 @@ const Container = styled.section`
   h3 {
     ${TextStyles.normal}
   }
+  @media ${media.laptop} {
+    border: none;
+    ${(props) => props.styles}
+  }
 `;
 
-export default function Box({ children, title, fullWidth }) {
+export default function Box({ children, title, fullWidth, styles }) {
   return (
-    <Container>
+    <Container styles={styles}>
       <TitleArea title={title}> </TitleArea>
       {children}
     </Container>

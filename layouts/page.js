@@ -14,8 +14,10 @@ const Container = styled.div`
   @media ${media.laptop} {
     width: calc(100vw - 28.75rem);
     height: 100vh;
-    border-top: 7px solid #cacaca;
+    overflow: hidden;
     margin-top: 0;
+    background: #162932;
+    border: none;
   }
 `;
 
@@ -23,7 +25,6 @@ const Background = styled.div`
   display: flex;
 `;
 export default function Page({ children }) {
-    
   return (
     <Background>
       <Head>

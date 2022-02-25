@@ -5,7 +5,7 @@ import TextStyles from "../../util/textStyles";
 import Link from "next/link";
 
 const Container = styled.div`
-  h1 {
+  a:h1 {
     ${TextStyles.oversized}
   }
   h2 {

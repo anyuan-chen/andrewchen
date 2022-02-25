@@ -16,46 +16,66 @@ import Page from "../layouts/page";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import HomeLayout from "../components/index/homeLayout";
+import ResumeBox from "../components/contact/resumeBox";
+import ResumeElement from "../components/contact/resumeElement";
 
 export default function Home({ workData, articleData }) {
   return (
     <Page>
-      <Box title="About Me">
-        <p style={{ paddingBottom: "7rem" }}>
-          I’m a software engineer based in Toronto who I design and build
-          refreshing web experiences, packed to the punch with delightful
-          interactions.
-        </p>
-      </Box>
-      <Box title="Work">
-        <WorkContainer>
-          {workData.map((project, index) => {
-            return (
-              <WorkRow
-                key={index}
-                projectName={project.title}
-                year={project.year}
-                link={project.link}
-              ></WorkRow>
-            );
-          })}
-        </WorkContainer>
-        <LinkMain></LinkMain>
-      </Box>
-      <Box title="Writing">
-        <WritingContainer>
-          {articleData.map((article, index) => {
-            return (
-              <ArticlePreview
-                key={index}
-                link={article.link}
-                title={article.title}
-                description={article.description}
-              ></ArticlePreview>
-            );
-          })}
-        </WritingContainer>
-      </Box>
+      <HomeLayout>
+        <Box title="About Me" styles={{ gridColumn: "1 / 3" }}>
+          <p style={{ paddingBottom: "7rem" }}>
+            I’m a software engineer based in Toronto who I design and build
+            refreshing web experiences, packed to the punch with delightful
+            interactions.
+          </p>
+        </Box>
+        <Box title="Work" styles={{ gridColumn: "1/ 1", gridRow: "2/5" }}>
+          <WorkContainer>
+            {workData.map((project, index) => {
+              return (
+                <WorkRow
+                  key={index}
+                  projectName={project.title}
+                  year={project.year}
+                  link={project.link}
+                ></WorkRow>
+              );
+            })}
+          </WorkContainer>
+          <LinkMain></LinkMain>
+        </Box>
+        <Box title="Writing" styles={{ gridColumn: "2/ 3", gridRow: "2/4" }}>
+          <WritingContainer>
+            {articleData.map((article, index) => {
+              if (index < 2) {
+                return (
+                  <ArticlePreview
+                    key={index}
+                    link={article.link}
+                    title={article.title}
+                    description={article.description}
+                  ></ArticlePreview>
+                );
+              }
+            })}
+          </WritingContainer>
+        </Box>
+        <Box styles={{ gridColumn: "2/ 3", gridRow: "4/5" }} title="Resume">
+          <ResumeBox>
+            <ResumeElement link="/resume/AndrewChenResume.pdf">
+              .pdf
+            </ResumeElement>
+            <ResumeElement link="/resume/AndrewChenResume.docx">
+              .docx
+            </ResumeElement>
+            <ResumeElement link="/resume/AndrewChenResume.tex">
+              .tex
+            </ResumeElement>
+          </ResumeBox>
+        </Box>
+      </HomeLayout>
     </Page>
   );
 }
@@ -65,7 +85,7 @@ export async function getStaticProps() {
     const projectData = fs.readFileSync(path.join("portfolio", project));
     const { data: frontmatter } = matter(projectData);
     frontmatter.link = project.substr(0, project.length - 4);
-    return  frontmatter ;
+    return frontmatter;
   });
   const articles = fs.readdirSync("articles");
   const articleData = articles.map((article) => {
