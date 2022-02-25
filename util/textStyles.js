@@ -16,6 +16,21 @@ const oversized = css`
     font-size: 4.55rem;
   }
 `;
+const articleHeading = css`
+  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  font-weight: 400;
+  @media ${media.laptop} {
+    font-size: 9.313rem;
+  }
+  @media ${media.tablet} {
+    font-size: 7.75rem;
+  }
+  @media ${media.phone} {
+    font-size: 5.55rem;
+  }
+`
 const normal = css`
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;

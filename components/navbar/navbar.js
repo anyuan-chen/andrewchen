@@ -17,7 +17,6 @@ const Aside = styled.aside`
   background-color: #021923;
   width: 28.75rem;
   height: 100vh;
-  
   position: fixed;
   z-index: 2;
   a {
@@ -35,9 +34,9 @@ const DesktopNav = styled.nav`
   @media ${media.laptop} {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    margin-left: auto;
-    padding-left: 40px;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 2rem;
     background-color: white;
     width: 16.666vw;
     height: 100vh;
@@ -46,19 +45,14 @@ const DesktopNav = styled.nav`
       text-decoration: underline rgba(0, 0, 0, 0);
       width: 0%;
       text-align: left;
-      border-top: 1px solid #d8d8d8;
       text-underline-offset: 3px;
       width: 170px;
       padding-top: 25px;
       padding-bottom: 25px; 
       ${TextStyles.laptopNav}
     }
-    a:first-child {
-      border-top: none;
-    }
-    a:last-child {
-      border-bottom: 1px solid #d8d8d8;
-    }
+    
+   
   }
 `;
 const StyledButton = styled.button`
@@ -96,9 +90,8 @@ const StyledHamburger = styled(Hamburger)`
 const StyledLogo = styled(Logo)`
   @media ${media.laptop} {
     color: black;
-    height: 191.7px;
-    width: 170px;
-    margin-bottom: 100px;
+    height: 151.7px;
+    width: 150px;
   }
   color: white;
 `;
@@ -171,6 +164,7 @@ export default function Navbar() {
           >
             {name}
           </motion.a>
+          
         ))}
       </DesktopNav>
     </div>
