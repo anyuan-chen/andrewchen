@@ -15,7 +15,7 @@ export default function About({
       <HomeLayout>
         <Box gridColumn="1/ 3" gridRow="1/4">
           <TitleArea title="About Me"></TitleArea>
-          <Text fontSize={theme.fontSize.p} color={theme.colors.white}>
+          <Text fontSize={theme.fontSize.h2} color={theme.colors.white}>
             I’m a software engineer based in Toronto who I design and build
             refreshing web experiences, packed to the punch with delightful
             interactions. I’m a software engineer based in Toronto who I design
@@ -26,9 +26,15 @@ export default function About({
         <Box gridColumn="1/ 2" gridRow="4/6">
           <TitleArea title="My Likes"></TitleArea>
           <LikesContainer>
-            <Text>hello</Text>
-            <Text>hello</Text>
-            <Text>hello</Text>
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+              hello
+            </Text>
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+              hello
+            </Text>
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+              hello
+            </Text>
           </LikesContainer>
         </Box>
         <Box gridColumn="2/ 3" gridRow="4/5">
@@ -41,12 +47,12 @@ export default function About({
             lastFmUrl={lastFmUrl}
           ></MusicBox>
         </Box>
-        <Box  gridColumn= "2/ 3" gridRow= "5/6" >
+        <Box gridColumn="2/ 3" gridRow="5/6">
           <TitleArea title="Credits"></TitleArea>
-          <h3>
+          <Text color={theme.colors.white} fontSize={theme.fontSize.p}>
             Built using Next.js, Styled Components, Framer Motion, MDX and
             Netlify.
-          </h3>
+          </Text>
         </Box>
       </HomeLayout>
     </Page>
