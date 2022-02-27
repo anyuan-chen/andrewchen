@@ -5,28 +5,39 @@ import SocialMediaRow from "../components/contact/socialMediaRow";
 import ResumeBox from "../components/contact/resumeBox";
 import ResumeElement from "../components/contact/resumeElement";
 import HomeLayout from "../components/index/homeLayout";
+import TitleArea from "../components/shared/titleArea";
+import Text from "../components/shared/text";
+import theme from "../theme";
+import styled from "styled-components";
+const SpacedBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+`;
 export default function Contact() {
   return (
     <Page>
       <HomeLayout>
-        <Box
-          title="Get In Touch"
-          styles={{ gridRow: "1/4", gridColumn: "1/3" }}
-        >
-          <SocialMediaRow
-            link="andrew.chen.anyuan@gmail.com"
-            title="Email"
-          ></SocialMediaRow>
-          <SocialMediaRow
-            link="linkedin.com/in/anyuan-chen"
-            title="LinkedIn"
-          ></SocialMediaRow>
-          <SocialMediaRow
-            link="github.com/anyuan-chen"
-            title="Github"
-          ></SocialMediaRow>
+        <Box gridRow="1/4" gridColumn="1/3">
+          <TitleArea title="Get In Touch"></TitleArea>
+
+          <SpacedBox>
+            <SocialMediaRow
+              link="andrew.chen.anyuan@gmail.com"
+              title="Email"
+            ></SocialMediaRow>
+            <SocialMediaRow
+              link="linkedin.com/in/anyuan-chen"
+              title="LinkedIn"
+            ></SocialMediaRow>
+            <SocialMediaRow
+              link="github.com/anyuan-chen"
+              title="Github"
+            ></SocialMediaRow>
+          </SpacedBox>
         </Box>
-        <Box title="Resume" styles={{ gridRow: "4/6", gridColumn: "1/2" }}>
+        <Box gridRow="4/6" gridColumn="1/2">
+          <TitleArea title="Resume"></TitleArea>
           <ResumeBox>
             <ResumeElement link="/resume/AndrewChenResume.pdf">
               .pdf
@@ -39,11 +50,13 @@ export default function Contact() {
             </ResumeElement>
           </ResumeBox>
         </Box>
-        <Box title="Availablity" styles={{ gridRow: "4/6", gridColumn: "2/3" }}>
-          <p>
+        <Box gridRow="4/6" gridColumn="2/3">
+          <TitleArea title="Availablity"></TitleArea>
+
+          <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
             I am currently studying full-time, but open to part time
             opportunities!
-          </p>
+          </Text>
         </Box>
       </HomeLayout>
     </Page>

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Link from "next/link";
 import TextStyles from "../../util/textStyles";
 import media from "../../util/media";
+import theme from "../../theme";
+import Text from "../shared/text";
 const Container = styled.div`
   display: flex;
   column-gap: 4rem;
@@ -16,18 +18,7 @@ const InnerContainer = styled.div`
   flex-direction: column;
   margin-top: 2rem;
   row-gap: 4rem;
-  h1 {
-    ${TextStyles.normal}
-    @media ${media.tablet} {
-      ${TextStyles.oversized}
-    }
-  }
-  h2 {
-    ${TextStyles.subtitleInter}
-  }
-  h3 {
-    ${TextStyles.paragraph}
-  }
+  
 `;
 export default function MusicBox({ name, artist, album, imgUrl, lastFmUrl }) {
   return (
@@ -35,9 +26,9 @@ export default function MusicBox({ name, artist, album, imgUrl, lastFmUrl }) {
       <Container>
         <img src={imgUrl} alt={album}></img>
         <InnerContainer>
-          <h1>{name}</h1>
-          <h2>{artist}</h2>
-          <h3>{album}</h3>
+          <Text color={theme.colors.white} fontSize={theme.fontSize.h2}>{name}</Text>
+          <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>{artist}</Text>
+          <Text color={theme.colors.white} fontSize={theme.fontSize.p}>{album}</Text>
         </InnerContainer>
       </Container>
     </a>

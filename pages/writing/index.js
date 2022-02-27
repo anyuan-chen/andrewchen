@@ -6,11 +6,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ArticlePreview from "../../components/writing/articlePreview";
+import TitleArea from "../../components/shared/titleArea";
 
 export default function Writing({ frontmatter }) {
   return (
     <Page>
-      <Box title="Writing">
+      <Box >
+        <TitleArea title="Writing"></TitleArea>
         <WritingContainer>
           {frontmatter.map((article, index) => {
             return (
