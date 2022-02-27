@@ -19,19 +19,28 @@ import path from "path";
 import HomeLayout from "../components/index/homeLayout";
 import ResumeBox from "../components/contact/resumeBox";
 import ResumeElement from "../components/contact/resumeElement";
+import TitleArea from "../components/shared/titleArea";
+import Text from "../components/shared/text";
+import theme from "../theme";
 
 export default function Home({ workData, articleData }) {
   return (
     <Page>
       <HomeLayout>
-        <Box title="About Me" styles={{ gridColumn: "1 / 3" }}>
-          <p style={{ paddingBottom: "7rem" }}>
+        <Box gridColumn="1 / 3">
+          <TitleArea title="About Me"></TitleArea>
+          <Text
+            paddingBottom="7rem"
+            color={theme.colors.white}
+            fontSize={theme.fontSize.h1}
+          >
             I’m a software engineer based in Toronto who I design and build
             refreshing web experiences, packed to the punch with delightful
             interactions.
-          </p>
+          </Text>
         </Box>
-        <Box title="Work" styles={{ gridColumn: "1/ 1", gridRow: "2/5" }}>
+        <Box title="Work" gridColumn="1/ 1" gridRow="2/5">
+          <TitleArea title="Work"></TitleArea>
           <WorkContainer>
             {workData.map((project, index) => {
               return (
@@ -46,7 +55,7 @@ export default function Home({ workData, articleData }) {
           </WorkContainer>
           <LinkMain></LinkMain>
         </Box>
-        <Box title="Writing" styles={{ gridColumn: "2/ 3", gridRow: "2/4" }}>
+        <Box title="Writing" gridColumn="2/ 3" gridRow="2/4">
           <WritingContainer>
             {articleData.map((article, index) => {
               if (index < 2) {
@@ -62,7 +71,7 @@ export default function Home({ workData, articleData }) {
             })}
           </WritingContainer>
         </Box>
-        <Box styles={{ gridColumn: "2/ 3", gridRow: "4/5" }} title="Resume">
+        <Box gridColumn="2/ 3" gridRow="4/5" title="Resume">
           <ResumeBox>
             <ResumeElement link="/resume/AndrewChenResume.pdf">
               .pdf

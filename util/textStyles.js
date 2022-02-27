@@ -1,157 +1,101 @@
 import { css } from "styled-components";
 import media from "./media";
 
-const oversized = css`
+const h1 = css`
   font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
-  font-weight: 400;
+  font-size: 7.475rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
   @media ${media.laptop} {
-    font-size: 9.313rem;
-  }
-  @media ${media.tablet} {
-    font-size: 4.75rem;
-  }
-  @media ${media.phone} {
-    font-size: 4.55rem;
-  }
-`;
-const articleHeading = css`
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
-  font-weight: 400;
-  @media ${media.laptop} {
-    font-size: 9.313rem;
-  }
-  @media ${media.tablet} {
-    font-size: 7.75rem;
-  }
-  @media ${media.phone} {
-    font-size: 5.55rem;
-  }
-`
-const normal = css`
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
-  font-weight: 400;
-  @media ${media.laptop} {
-    font-size: 4.313rem;
-  }
-  @media ${media.tablet} {
-    font-size: 3.55rem;
-  }
-  @media ${media.phone} {
-    font-size: 3rem;
-  }
-`;
-//48 laptop,
-const heading = css`
-  font-size: 5.96rem;
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  @media ${media.laptop} {
-    font-size: 4.74rem;
-  }
-  @media ${media.tablet} {
-    font-size: 5.75rem;
-  }
-  @media ${media.phone} {
-    font-size: 3.6rem;
-  }
-`;
-const subtitle = css`
-  font-size: 3.052rem;
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  letter-spacing: 0.08em;
-  font-weight: 400;
-  @media ${media.laptop} {
-    font-size: 3.052rem;
-  }
-  @media ${media.tablet} {
-    font-size: 2.5rem;
-  }
-  @media ${media.phone} {
-    font-size: 2rem;
-  }
-`;
-const laptopNav = css`
-  font-size: 3.052rem;
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  letter-spacing: 0.08em;
-  font-weight: 400;
-  font-size: 2rem;
-  @media ${media.tablet} {
-    font-size: 2.5rem;
-  }
-  @media ${media.laptop} {
-    font-size: 3.052rem;
+    font-family: Platform;
+    font-size: 18rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.44px;
   }
 `;
 
-const subtitleInter = css`
-  font-size: 3.052rem;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: white;
-  font-weight: 400;
-  font-size: 2rem;
-  @media ${media.tablet} {
-    font-size: 2.5rem;
-  }
+const h2 = css`
+  font-family: Platform;
+  font-size: 5.6rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.45px;
   @media ${media.laptop} {
-    font-size: 3.052rem;
+    font-family: Platform;
+    font-size: 11rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.88px;
   }
 `;
-const paragraph = css`
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 1.953rem;
-  font-weight: 400;
-  color: #ccd1d3;
+const h3 = css`
+  font-family: Platform;
+  font-size: 4.207rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.34px;
   @media ${media.laptop} {
-    font-size: 2rem;
-  }
-  @media ${media.tablet} {
-    font-size: 2rem;
-  }
-  @media ${media.phone} {
-    font-size: 2rem;
+    font-family: Platform;
+    font-size: 6.852rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.55px;
   }
 `;
-const link = css`
-  color: inherit;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  text-decoration: underline;
-  font-size: 2.441rem;
-  font-weight: 400;
-  color: #ccd1d3;
-  text-underline-offset: 3px;
+const h3Inter = css`
+  font-family: Inter;
+  font-size: 4.207rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+`;
+const pInter = css`
   @media ${media.laptop} {
-    font-size: 4rem;
-  }
-  @media ${media.tablet} {
-    font-size: 3rem;
-  }
-  @media ${media.phone} {
-    font-size: 2.5rem;
+    font-family: Inter;
+    font-size: 4.235rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
   }
 `;
+const p = css`
+  @media ${media.laptop} {
+    font-family: Platform;
+    font-size: 4.235rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.34px;
+  }
+`;
+
 const TextStyles = {
-  oversized,
-  heading,
-  subtitle,
-  laptopNav,
-  subtitleInter,
-  paragraph,
-  normal,
-  link,
+  h1,
+  h2,
+  h3,
+  h3Inter,
+  p,
+  pInter,
 };
 
 export default TextStyles;

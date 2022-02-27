@@ -1,17 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "styled-components";
-const Title = styled.div`
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding-bottom: 1rem;
-`
-export default function TitleArea({title}) {
+import Title from "./title";
+import theme from "../../theme";
+
+export default function TitleArea({ title }) {
   return (
-    <Title> 
-      <h1>{title}</h1>
-      <img src="/icons/arrow_downward.svg" alt="arrow"></img>
+    <Title fontSize={theme.fontSize.h2} color={theme.colors.white}>
+      {title}
+      <img
+        src="/icons/arrow_downward.svg"
+        alt="arrow"
+        styles={{ alignSelf: "start" }}
+      ></img>
     </Title>
-  ); 
+  );
 }
