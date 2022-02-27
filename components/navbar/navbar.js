@@ -3,8 +3,9 @@ import { motion, useCycle, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import { Hamburger } from "../icons/hamburger";
 import { Logo } from "../icons/logo";
-import TextStyles from "../../util/textStyles";
 import media from "../../util/media";
+import Text from "../shared/text";
+import theme from "../../theme";
 const links = [
   { name: "Home", to: "/", id: 1 },
   { name: "Work", to: "/work", id: 2 },
@@ -36,10 +37,10 @@ const DesktopNav = styled.nav`
     flex-direction: column;
     align-items: center;
     gap: 5rem;
-    padding-top: 2rem;
     background-color: white;
     width: 16.666vw;
-    height: 100vh;
+    row-gap: 16rem;
+    margin-top: 6rem;
     a {
       background: none;
       text-decoration: underline rgba(0, 0, 0, 0);
@@ -47,12 +48,7 @@ const DesktopNav = styled.nav`
       text-align: left;
       text-underline-offset: 3px;
       width: 170px;
-      padding-top: 25px;
-      padding-bottom: 25px; 
-      ${TextStyles.laptopNav}
     }
-    
-   
   }
 `;
 const StyledButton = styled.button`
@@ -100,7 +96,7 @@ const itemVariants = {
     opacity: 0,
   },
   open: {
-    opacity: 1, 
+    opacity: 1,
   },
 };
 const sideVariants = {
@@ -138,7 +134,9 @@ export default function Navbar() {
             >
               {links.map(({ name, to, id }) => (
                 <motion.a key={id} href={to} variants={itemVariants}>
-                  {name}
+                  <Text fontSize={theme.fontSize.h1} paddingBottom={[2]}>
+                    {name}
+                  </Text>
                 </motion.a>
               ))}
             </Container>
@@ -162,12 +160,12 @@ export default function Navbar() {
             variants={itemVariants}
             whileHover={{ textDecoration: "underline rgba(0,0,0,1)" }}
           >
-            {name}
+            <Text fontSize={theme.fontSize.h3} paddingBottom={[2]}>
+              {name}
+            </Text>
           </motion.a>
-          
         ))}
       </DesktopNav>
     </div>
   );
 }
-

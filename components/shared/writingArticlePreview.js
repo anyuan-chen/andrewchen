@@ -1,24 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import TextStyles from "../../util/textStyles";
 import Link from "next/link";
+import Text from "./text";
+import theme from "../../theme";
+
 const WritingContainer = styled.div`
   display: flex;
   flex-direction: column;
-  h1 {
-    ${TextStyles.heading}
-    color: white;
-    margin-top: 2rem;
-  }
   p {
     margin-top: 2rem;
-    ${TextStyles.paragraph}
   }
-  hr {
-    margin-top: 4rem;
-    width: 92%;
-    opacity: 60%;
-  }
+ 
 `;
 
 export default function ArticlePreview({ title, description, link }) {
@@ -26,11 +18,14 @@ export default function ArticlePreview({ title, description, link }) {
     <WritingContainer>
       <Link href={`/writing/${link.toLowerCase()}`}>
         <a>
-          <h1>{title}</h1>
-          <p>{description}</p>
+          <Text fontSize={theme.fontSize.h2} color={theme.colors.white}>
+            {title}
+          </Text>
+          <Text fontSize={theme.fontSize.p} color={theme.colors.lightGray}>
+            {description}
+          </Text>
         </a>
       </Link>
-      <hr></hr>
     </WritingContainer>
   );
 }

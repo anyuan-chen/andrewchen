@@ -56,6 +56,8 @@ export default function Home({ workData, articleData }) {
           <LinkMain></LinkMain>
         </Box>
         <Box title="Writing" gridColumn="2/ 3" gridRow="2/4">
+          <TitleArea title="Writing"></TitleArea>
+
           <WritingContainer>
             {articleData.map((article, index) => {
               if (index < 2) {
@@ -72,6 +74,7 @@ export default function Home({ workData, articleData }) {
           </WritingContainer>
         </Box>
         <Box gridColumn="2/ 3" gridRow="4/5" title="Resume">
+          <TitleArea title={"Resume"}></TitleArea>
           <ResumeBox>
             <ResumeElement link="/resume/AndrewChenResume.pdf">
               .pdf
@@ -104,6 +107,8 @@ export async function getStaticProps() {
     return frontmatter;
   });
   console.log(workData);
+  workData.sort((a, b) => (a.year > b.year ? -1 : 1));
+
   return {
     props: {
       workData,

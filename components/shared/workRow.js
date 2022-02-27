@@ -13,8 +13,12 @@ export default function WorkRow({ projectName, year, link }) {
     <Link href={`/work/${link}`}>
       <a>
         <Row>
-          <Text fontSize={theme.fontSize.h1}>{projectName}</Text>
-          <Text fontSize={theme.fontSize.h2}>{year}</Text>
+          <Text fontSize={theme.fontSize.h1} color={theme.colors.white}>
+            {projectName}
+          </Text>
+          <Text fontSize={theme.fontSize.h2} color={theme.colors.white}>
+            {year}
+          </Text>
         </Row>
       </a>
     </Link>

@@ -4,29 +4,35 @@ import Box from "../components/shared/box";
 import LikesContainer from "../components/about/likesContainer";
 import MusicBox from "../components/about/musicBox";
 import HomeLayout from "../components/index/homeLayout";
+import Text from "../components/shared/text";
+import theme from "../theme";
+import TitleArea from "../components/shared/titleArea";
 export default function About({
   songInfo: { artist, imgUrl, album, name, lastFmUrl },
 }) {
   return (
     <Page>
       <HomeLayout>
-        <Box title="About Me" styles={{ gridColumn: "1/ 3", gridRow: "1/4" }}>
-          <h3>
+        <Box gridColumn="1/ 3" gridRow="1/4">
+          <TitleArea title="About Me"></TitleArea>
+          <Text fontSize={theme.fontSize.p} color={theme.colors.white}>
             I’m a software engineer based in Toronto who I design and build
             refreshing web experiences, packed to the punch with delightful
             interactions. I’m a software engineer based in Toronto who I design
             and build refreshing web experiences, packed to the punch with
             delightful.
-          </h3>
+          </Text>
         </Box>
-        <Box title="My Likes  " styles={{ gridColumn: "1/ 2", gridRow: "4/6" }}>
+        <Box gridColumn="1/ 2" gridRow="4/6">
+          <TitleArea title="My Likes"></TitleArea>
           <LikesContainer>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
+            <Text>hello</Text>
+            <Text>hello</Text>
+            <Text>hello</Text>
           </LikesContainer>
         </Box>
-        <Box title="What I'm Listening To Right Now" styles={{ gridColumn: "2/ 3", gridRow: "4/5" }}>
+        <Box gridColumn="2/ 3" gridRow="4/5">
+          <TitleArea title="What I'm Listening To "></TitleArea>
           <MusicBox
             name={name}
             artist={artist}
@@ -35,7 +41,8 @@ export default function About({
             lastFmUrl={lastFmUrl}
           ></MusicBox>
         </Box>
-        <Box title="Credits" styles={{ gridColumn: "2/ 3", gridRow: "5/6" }}>
+        <Box  gridColumn= "2/ 3" gridRow= "5/6" >
+          <TitleArea title="Credits"></TitleArea>
           <h3>
             Built using Next.js, Styled Components, Framer Motion, MDX and
             Netlify.

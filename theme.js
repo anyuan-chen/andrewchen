@@ -12,5 +12,6 @@ export default {
     h3: ["4.207rem", "6.852rem"],
     h2: ["5.6rem", "11rem"],
     h1: ["7.475rem", "18rem"],
+    p: ["4.235rem"]
   },
 };

@@ -12,8 +12,8 @@ const Box = styled.section`
   border-bottom: 7px solid #cacaca;
   display: flex;
   flex-direction: column;
-  padding: 3rem 4rem;
-  
+  padding: 6rem 8rem;
+ 
   @media ${media.laptop} {
     border: none;
     ${gridColumn}

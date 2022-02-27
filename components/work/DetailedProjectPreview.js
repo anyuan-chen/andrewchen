@@ -3,16 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import TextStyles from "../../util/textStyles";
 import Link from "next/link";
+import Text from "../shared/text";
+import theme from "../../theme";
 
-const Container = styled.div`
-  a:h1 {
-    ${TextStyles.oversized}
-  }
-  h2 {
-    ${TextStyles.heading}
-    margin-bottom: 4rem;
-  }
-`;
+
 export default function DetailedProjectPreview({
   title,
   description,
@@ -21,13 +15,11 @@ export default function DetailedProjectPreview({
 }) {
   return (
     <Link href={`/work/${title.toLowerCase()}`} passHref>
-      <Container>
         <a>
           {imgUrl && <img src={imgUrl} alt={description}></img>}
-          <h1>{title}</h1>
-          <h2>{year}</h2>
+          <Text fontSize={theme.fontSize.h1} color={theme.colors.white}>{title}</Text>
+          <Text fontSize={theme.fontSize.h3} color={theme.colors.lightGray}>{description}</Text>
         </a>
-      </Container>
     </Link>
   );
 }

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import {
   color,
+  fontFamily,
   fontSize,
   paddingBottom,
   paddingLeft,
   paddingRight,
   paddingTop,
-} from "styled-system";
+} from "styled-system"; 
 
 const Text = styled.p`
   ${fontSize}
@@ -15,5 +16,6 @@ const Text = styled.p`
   ${paddingTop}
   ${paddingRight}
   ${paddingLeft}
+  ${fontFamily}
 `;
 export default Text;

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
-import theme from "../theme";
+import theme from "../theme"
 
 function MyApp({ Component, pageProps }) {
   return (
