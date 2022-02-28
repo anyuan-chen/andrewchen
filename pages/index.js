@@ -22,22 +22,33 @@ import ResumeElement from "../components/contact/resumeElement";
 import TitleArea from "../components/shared/titleArea";
 import Text from "../components/shared/text";
 import theme from "../theme";
-
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+`;
 export default function Home({ workData, articleData }) {
   return (
     <Page>
+      <Head>
+        <title>Andrew Chen</title>
+      </Head>
       <HomeLayout>
-        <Box gridColumn="1 / 3">
+        <Box gridColumn="1 / 3" >
           <TitleArea title="About Me"></TitleArea>
-          <Text
-            paddingBottom="7rem"
-            color={theme.colors.white}
-            fontSize={theme.fontSize.h1}
-          >
-            I’m a software engineer based in Toronto who I design and build
-            refreshing web experiences, packed to the punch with delightful
-            interactions.
-          </Text>
+          <Container>
+            <Text
+              paddingBottom="14rem"
+              color={theme.colors.white}
+              fontSize={theme.fontSize.h1}
+            >
+              I’m a software engineer based in Toronto.
+            </Text>
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3} style={{opacity:0.85}}>
+              I design and build refreshing web experiences, packed to the punch
+              with delightful interactions.
+            </Text>
+          </Container>
         </Box>
         <Box title="Work" gridColumn="1/ 1" gridRow="2/5">
           <TitleArea title="Work"></TitleArea>

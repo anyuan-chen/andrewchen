@@ -26,14 +26,14 @@ export default function About({
         <Box gridColumn="1/ 2" gridRow="4/6">
           <TitleArea title="My Likes"></TitleArea>
           <LikesContainer>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-              hello
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3} >
+            Built using Next.js, Styled Components, Framer Motion,
             </Text>
             <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-              hello
+            Built using Next.js, Styled Components, Framer Motion, 
             </Text>
             <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-              hello
+            Built using Next.js, Styled Components, Framer Motion, 
             </Text>
           </LikesContainer>
         </Box>

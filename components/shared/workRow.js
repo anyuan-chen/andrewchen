@@ -16,7 +16,7 @@ export default function WorkRow({ projectName, year, link }) {
           <Text fontSize={theme.fontSize.h1} color={theme.colors.white}>
             {projectName}
           </Text>
-          <Text fontSize={theme.fontSize.h2} color={theme.colors.white}>
+          <Text fontSize={theme.fontSize.h2} color={theme.colors.gray} fontWeight="300" >
             {year}
           </Text>
         </Row>

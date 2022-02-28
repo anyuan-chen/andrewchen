@@ -53,7 +53,7 @@ export default function Contact() {
         <Box gridRow="4/6" gridColumn="2/3">
           <TitleArea title="Availablity"></TitleArea>
 
-          <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+          <Text color={theme.colors.white} fontSize={theme.fontSize.h3} fontWeight={400}>
             I am currently studying full-time, but open to part time
             opportunities!
           </Text>

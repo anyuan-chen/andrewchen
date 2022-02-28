@@ -6,7 +6,7 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none; 
-  row-gap: 3rem;
+  row-gap: 8rem;
   li {
     decoration: none;
     ${TextStyles.normal}
