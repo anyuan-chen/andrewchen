@@ -16,10 +16,16 @@ const Row = styled.div`
   justify-content: space-between;
 `;
 
+const Line = styled.hr`
+  margin-top: 6rem;
+  height: 1px;
+  opacity: 20%;
+  color: gray;
+`
 export default function ArticlePreview({ title, description, date, url }) {
   return (
     <Container>
-        <Title fontSize={theme.fontSize.h2} color={theme.colors.white}>
+        <Title fontSize={theme.fontSize.h2} color={theme.colors.white} style={{fontWeight: 500}}>
           {title}
         </Title>
         <Title fontSize={theme.fontSize.p} color={theme.colors.lightGray}>
@@ -30,7 +36,7 @@ export default function ArticlePreview({ title, description, date, url }) {
             <a>
               <Title
                 fontSize={theme.fontSize.p}
-                color={theme.colors.lightGray}
+                color={theme.colors.gray}
                 style={{textDecoration: "underline"}}
               >
                 Read More
@@ -38,11 +44,12 @@ export default function ArticlePreview({ title, description, date, url }) {
             </a>
           </Link>
           <div>
-            <Title fontSize={theme.fontSize.p} color={theme.colors.lightGray}>
+            <Title fontSize={theme.fontSize.p} color={theme.colors.gray} fontStyle="italic">
               {date}
             </Title>
           </div>
         </Row>
+        <Line></Line>
     </Container>
   );
 }

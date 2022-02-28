@@ -12,12 +12,17 @@ const Box = styled.section`
   border-bottom: 7px solid #cacaca;
   display: flex;
   flex-direction: column;
-  padding: 6rem 8rem;
+  padding-top: 12rem;
+  padding-left: 14rem;
+  padding-right: 14rem;
+  padding-bottom: 14rem;
  
   @media ${media.laptop} {
     border: none;
     ${gridColumn}
     ${gridRow}
+    padding-left: 12  rem;
+
   }
 `;
 

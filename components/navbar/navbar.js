@@ -36,11 +36,10 @@ const DesktopNav = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
     background-color: white;
     width: 16.666vw;
     row-gap: 16rem;
-    margin-top: 6rem;
+    margin-top: 16rem;
     a {
       background: none;
       text-decoration: underline rgba(0, 0, 0, 0);

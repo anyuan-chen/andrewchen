@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 8rem;
 `
 export default function WritingContainer({children}) {
   return (
