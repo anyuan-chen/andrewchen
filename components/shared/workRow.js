@@ -41,6 +41,7 @@ export default function WorkRow({ projectName, year, link }) {
               fontSize={theme.fontSize.h2}
               color={theme.colors.gray}
               fontWeight="300"
+              style={{marginRight: "10px"}}
             >
               {year}
             </Text>

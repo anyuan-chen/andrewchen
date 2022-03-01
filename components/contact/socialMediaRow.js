@@ -16,7 +16,7 @@ export default function SocialMediaRow({ title, link }) {
       <Text color={theme.colors.gray} fontSize={theme.fontSize.h3}>
         {title}
       </Text>
-      <Link href={link} passHref>
+      <Link href={`https://www.${link}`} passHref>
         <motion.a
         style={{
           textDecoration: "underline rgba(255, 255, 255, 0) 5px",

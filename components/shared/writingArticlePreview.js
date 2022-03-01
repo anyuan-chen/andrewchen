@@ -8,14 +8,12 @@ import { AnimatePresence, motion } from "framer-motion";
 const WritingContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  p {
-    margin-top: 2rem;
-  }
+
 `;
 const slashMotion = {
   rest: { opacity: 1, ease: "easeOut", duration: 0.2, type: "tween" },
   hover: {
-    opacity: 0.8,
+    opacity: 0.2,
     transition: {
       duration: 0.4,
       type: "tween",

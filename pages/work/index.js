@@ -12,6 +12,7 @@ import Text from "../../components/shared/text";
 import theme from "../../theme";
 import media from "../../util/media";
 import WorkComponent from "../../components/shared/workComponent";
+import Head from "next/head";
 
 const Container = styled.div`
   row-gap: 8rem;
@@ -29,10 +30,10 @@ const DesktopContainer = styled.div`
     height: 100vh;
   }
 `;
-const DynamicTitle = styled.div``;
 export default function Work({ files }) {
   return (
     <Page>
+      <Head><title>Work</title></Head>
       <Box>
         <Container>
           <TitleArea title="Work"></TitleArea>

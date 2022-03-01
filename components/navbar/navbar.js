@@ -15,9 +15,12 @@ const links = [
 ];
 
 const Aside = styled.aside`
-  background-color: #021923;
+  background-color: #1c3039;
   width: 28.75rem;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10rem;
   position: fixed;
   z-index: 2;
   a {
@@ -75,6 +78,9 @@ const ButtonContainer = styled.div`
 `;
 const Container = styled.div`
   margin: 8.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10rem;
 `;
 const StyledHamburger = styled(Hamburger)`
   color: white;
@@ -107,7 +113,7 @@ const sideVariants = {
   },
   open: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.1,
       staggerDirection: 1,
     },
   },
@@ -121,8 +127,8 @@ export default function Navbar() {
           <Aside
             as={motion.aside}
             initial={{ width: 0 }}
-            animate={{ width: 300 }}
-            exit={{ width: 0, transition: { delay: 0.7, duration: 0.3 } }}
+            animate={{ width: "80vw" }}
+            exit={{ width: 0, transition: { delay: 0.7, duration: 0.4 } }}
           >
             <Container
               as={motion.div}
@@ -132,7 +138,12 @@ export default function Navbar() {
               exit="closed"
             >
               {links.map(({ name, to, id }) => (
-                <motion.a key={id} href={to} variants={itemVariants}>
+                <motion.a
+                  key={id}
+                  href={to}
+                  variants={itemVariants}
+                  whileHover={{ textDecoration: "underline rgba(255,255,255,1)" }}
+                >
                   <Text fontSize={theme.fontSize.h1} paddingBottom={[2]}>
                     {name}
                   </Text>

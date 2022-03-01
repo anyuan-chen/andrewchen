@@ -26,9 +26,9 @@ const Line = styled.hr`
 const gogray = {
   rest: { ease: "easeOut", duration: 0.2, type: "tween" },
   hover: {
-    opacity: 0.8,
+    opacity: 0.2,
     transition: {
-      duration: 0.4,
+      duration: 0.1,
       type: "tween",
       ease: "easeIn",
     },

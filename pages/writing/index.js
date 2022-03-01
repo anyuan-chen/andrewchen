@@ -7,10 +7,12 @@ import path from "path";
 import matter from "gray-matter";
 import ArticlePreview from "../../components/writing/articlePreview";
 import TitleArea from "../../components/shared/titleArea";
+import Head from "next/head";
 
 export default function Writing({ frontmatter }) {
   return (
     <Page>
+      <Head><title>Writing</title></Head>
       <Box >
         <TitleArea title="Writing"></TitleArea>
         <WritingContainer>
