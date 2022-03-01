@@ -11,10 +11,11 @@ export default function DetailedProjectPreview({
   title,
   description,
   imgUrl,
+  link,
   year,
 }) {
   return (
-    <Link href={`/work/${title.toLowerCase()}`} passHref>
+    <Link href={`/work/${link}`} passHref>
         <a>
           {imgUrl && <img src={imgUrl} alt={description}></img>}
           <Text fontSize={theme.fontSize.h1} color={theme.colors.white}>{title}</Text>
