@@ -26,17 +26,17 @@ export default function About({
         <Box gridColumn="1/ 2" gridRow="4/6">
           <TitleArea title="What I've been doing"></TitleArea>
           <LikesContainer>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
               Smushing my finger trying to hone my knife skills
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
               Salvaging and repurposing old computers
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
               Catching a game of Team WE in the LPL
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-              Enjoying 
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
+              Going 8th in Teamfight Tactics
             </Text>
             
           </LikesContainer>

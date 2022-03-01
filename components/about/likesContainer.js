@@ -6,10 +6,12 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none; 
-  row-gap: 8rem;
+  row-gap: 6rem;
+  font-family:  -apple-system, BlinkMacSystemFont, Helvetica, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   li {
     decoration: none;
-    ${TextStyles.normal}
+
   }
 `;
 export default function LikesContainer({ children }) {

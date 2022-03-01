@@ -7,7 +7,6 @@ const Text = styled.p`
   ${fontWeight}
   ${fontFamily}
   ${fontStyle}
-  font-family: Platform, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 `;
 export default Text;

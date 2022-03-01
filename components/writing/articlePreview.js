@@ -36,16 +36,12 @@ const gogray = {
 };
 export default function ArticlePreview({ title, description, date, url }) {
   return (
-    <Link href={url}>
+    <Link href={`/writing/${url}`}>
       <a>
         <AnimatePresence>
           <Container initial="rest" whileHover="hover" animate="rest">
             <motion.div variants={gogray}>
-              <Title
-                fontSize={theme.fontSize.h2}
-                color={theme.colors.white}
-                style={{ fontWeight: 500 }}
-              >
+              <Title fontSize={theme.fontSize.h2} color={theme.colors.white}>
                 {title}
               </Title>
               <Title fontSize={theme.fontSize.p} color={theme.colors.lightGray}>

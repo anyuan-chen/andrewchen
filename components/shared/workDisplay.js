@@ -27,7 +27,7 @@ const slashMotion = {
 };
 
 export default function WorkDisplay({ title, year, imageUrl, link }) {
-  return (
+  return (  
     <Link href={`work/${link}`}>
       <a>
         <motion.div initial="rest" whileHover="hover" animate="rest">
