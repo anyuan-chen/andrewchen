@@ -9,6 +9,7 @@ import TitleArea from "../components/shared/titleArea";
 import Text from "../components/shared/text";
 import theme from "../theme";
 import styled from "styled-components";
+import Head from "next/head";
 const SpacedBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,10 +18,10 @@ const SpacedBox = styled.div`
 export default function Contact() {
   return (
     <Page>
+      <Head><title>Contact Me</title></Head>
       <HomeLayout>
         <Box gridRow="1/4" gridColumn="1/3">
           <TitleArea title="Get In Touch"></TitleArea>
-
           <SpacedBox>
             <SocialMediaRow
               link="andrew.chen.anyuan@gmail.com"

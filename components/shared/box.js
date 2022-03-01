@@ -12,16 +12,19 @@ const Box = styled.section`
   border-bottom: 7px solid #cacaca;
   display: flex;
   flex-direction: column;
-  padding-top: 12rem;
-  padding-left: 14rem;
-  padding-right: 14rem;
-  padding-bottom: 14rem;
+  padding-top: 6rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-bottom: 8rem;
  
   @media ${media.laptop} {
     border: none;
     ${gridColumn}
     ${gridRow}
-    padding-left: 12  rem;
+    padding-top: 12rem;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    padding-bottom: 16rem;
 
   }
 `;

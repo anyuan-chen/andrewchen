@@ -44,7 +44,7 @@ export default function Home({ workData, articleData }) {
             >
               I’m a software engineer based in Toronto.
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3} style={{opacity:0.85}}>
+            <Text color={theme.colors.white} fontSize={theme.fontSize.h3} >
               I design and build refreshing web experiences, packed to the punch
               with delightful interactions.
             </Text>

@@ -7,37 +7,48 @@ import HomeLayout from "../components/index/homeLayout";
 import Text from "../components/shared/text";
 import theme from "../theme";
 import TitleArea from "../components/shared/titleArea";
+import Head from "next/head";
 export default function About({
   songInfo: { artist, imgUrl, album, name, lastFmUrl },
 }) {
   return (
     <Page>
+      <Head>
+        <title>About Me</title>
+      </Head>
       <HomeLayout>
         <Box gridColumn="1/ 3" gridRow="1/4">
           <TitleArea title="About Me"></TitleArea>
-          <Text fontSize={theme.fontSize.h2} color={theme.colors.white}>
-            I’m a software engineer based in Toronto who I design and build
-            refreshing web experiences, packed to the punch with delightful
-            interactions. I’m a software engineer based in Toronto who I design
-            and build refreshing web experiences, packed to the punch with
-            delightful.
+          <Text
+            fontSize={theme.fontSize.h1}
+            color={theme.colors.white}
+            style={{ paddingBottom: "3rem" }}
+          >
+            I build web experiences with a focus on interaction design.
           </Text>
+          {/* <Text fontSize={theme.fontSize.h3} color={theme.colors.lightGray}>
+            I build web experiences with a focus on interaction design, exporing
+            how we can best deliver joy to users.
+          </Text> */}
         </Box>
-        <Box gridColumn="1/ 2" gridRow="4/6">
-          <TitleArea title="My Likes"></TitleArea>
+        <Box gridColumn="2/ 3" gridRow="4/5">
+          <TitleArea title="What I've been doing"></TitleArea>
           <LikesContainer>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3} >
-            Built using Next.js, Styled Components, Framer Motion,
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
+              Smushing my finger trying to hone my knife skills
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-            Built using Next.js, Styled Components, Framer Motion, 
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
+              Salvaging old computers
             </Text>
-            <Text color={theme.colors.white} fontSize={theme.fontSize.h3}>
-            Built using Next.js, Styled Components, Framer Motion, 
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
+              Catching a game of Team WE in the LPL
+            </Text>
+            <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
+              Going 8th in Teamfight Tactics
             </Text>
           </LikesContainer>
         </Box>
-        <Box gridColumn="2/ 3" gridRow="4/5">
+        <Box gridColumn="1/ 2" gridRow="4/6">
           <TitleArea title="What I'm Listening To "></TitleArea>
           <MusicBox
             name={name}
@@ -49,7 +60,7 @@ export default function About({
         </Box>
         <Box gridColumn="2/ 3" gridRow="5/6">
           <TitleArea title="Credits"></TitleArea>
-          <Text color={theme.colors.white} fontSize={theme.fontSize.p}>
+          <Text color={theme.colors.lightGray} fontSize={theme.fontSize.h3}>
             Built using Next.js, Styled Components, Framer Motion, MDX and
             Netlify.
           </Text>
