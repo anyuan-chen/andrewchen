@@ -35,6 +35,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
+          ></link>
+          
           <link href="/icons/logo_placeholder.svg" rel="shortcut icon"></link>
         </Head>
         <body>

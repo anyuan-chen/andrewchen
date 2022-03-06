@@ -9,11 +9,11 @@ export default {
     gray: "#9aa3a7",
   },
   fontSize: {
-    h3: ["4.207rem", "6.852rem"],
-    h2: ["5.6rem", "11rem"],
-    h1: ["7.475rem", "18rem"],
+    h3: ["4.207rem", null, "6.852rem"],
+    h2: ["5.6rem", null, "11rem"],
+    h1: ["7.475rem", "15rem", "18rem"],
     p: ["4.235rem"],
   },
-  breakpoints: ["425px", "1585px"],
-  space: [0,"2rem", "4rem", "8rem", "16rem"]
+  breakpoints: ["425px", null, "1585px"],
+  space: [0, "2rem", "4rem", "8rem", "16rem"],
 };
