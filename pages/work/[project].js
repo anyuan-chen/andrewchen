@@ -10,22 +10,30 @@ import Button from "../../components/mdx/button";
 import Heading from "../../components/mdx/heading";
 import Paragraph from "../../components/mdx/paragraph";
 import ArticleLayout from "../../components/mdx/articleLayout";
+import InfoRow from "../../components/mdx/infoRow";
+import HeaderLayout from "../../components/mdx/headerLayout";
+import LinksRow from "../../components/mdx/LinksRow";
+import BodyLayout from "../../components/mdx/bodyLayout";
+import Head from "next/head";
+import CodeBlock from "../../components/mdx/codeblock";
+import 
 const components = {
-    Heading,
-    Paragraph,
-    Button,
-    ArticleLayout,
-    SyntaxHighlighter
-}
-export default function Project({
-  mdxSource,
-}) {
+  CodeBlock,
+  Heading,
+  Paragraph,
+  Button,
+  ArticleLayout,
+  SyntaxHighlighter,
+  InfoRow,
+  HeaderLayout,
+  LinksRow,
+  Head,
+  BodyLayout
+};
+export default function Project({ mdxSource }) {
   return (
     <Page>
-      <MDXRemote
-        {...mdxSource}
-        components={components}
-      />
+      <MDXRemote {...mdxSource} components={components} />
     </Page>
   );
 }

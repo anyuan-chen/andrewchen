@@ -14,7 +14,7 @@ const Container = styled.div`
   @media ${media.laptop} {
     width: calc(100vw - 28.75rem);
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
     margin-top: 0;
     background: #162932;
     border: none;
@@ -27,9 +27,6 @@ const Background = styled.div`
 export default function Page({ children }) {
   return (
     <Background>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <Navbar></Navbar>
       <Container>{children}</Container>
     </Background>

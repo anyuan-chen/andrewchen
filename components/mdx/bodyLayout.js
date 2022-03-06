@@ -10,8 +10,11 @@ const Container = styled(Box)`
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;
+  @media ${media.laptop} {
+    padding: 10rem 20%;
+  }
 `;
 
-export default function ArticleLayout({ children, fullWidth }) {
+export default function BodyLayout({ children }) {
   return <Container>{children}</Container>;
 }

@@ -6,6 +6,7 @@ import { Logo } from "../icons/logo";
 import media from "../../util/media";
 import Text from "../shared/text";
 import theme from "../../theme";
+import Link from "next/link";
 const links = [
   { name: "Home", to: "/", id: 1 },
   { name: "Work", to: "/work", id: 2 },
@@ -142,7 +143,9 @@ export default function Navbar() {
                   key={id}
                   href={to}
                   variants={itemVariants}
-                  whileHover={{ textDecoration: "underline rgba(255,255,255,1)" }}
+                  whileHover={{
+                    textDecoration: "underline rgba(255,255,255,1)",
+                  }}
                 >
                   <Text fontSize={theme.fontSize.h1} paddingBottom={[2]}>
                     {name}
@@ -154,15 +157,21 @@ export default function Navbar() {
         )}
       </AnimatePresence>
       <ButtonContainer>
-        <StyledLogo></StyledLogo>
+        <Link href="/">
+          <a>
+            <StyledLogo></StyledLogo>
+          </a>
+        </Link>
         <StyledButton onClick={cycleOpen}>
           <StyledHamburger></StyledHamburger>
         </StyledButton>
       </ButtonContainer>
       <DesktopNav>
-        <motion.a href="/" whileHover={{ scale: 1.03 }}>
-          <StyledLogo></StyledLogo>
-        </motion.a>
+        <Link href="/" passHref>
+          <motion.a whileHover={{ scale: 1.03 }}>
+            <StyledLogo></StyledLogo>
+          </motion.a>
+        </Link>
         {links.map(({ name, to, id }) => (
           <motion.a
             key={id}
